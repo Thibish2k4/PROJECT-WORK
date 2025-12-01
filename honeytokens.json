@@ -1,0 +1,723 @@
+{
+  "tokens": [
+    {
+      "token_id": "179202c4f5566b68",
+      "token_type": "github_pat",
+      "token_value": "ghp_IyHCsPwHxXfFanAmopAQreJCFS1VCtuDd4X1",
+      "token_hash": "179202c4f5566b68b87f4cc7e064c863fe5a070bb12a05fca89536b5c7e69992",
+      "created_at": "2025-11-22T03:46:36.108351",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpx9zs5ehr\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "a0212f4e9d3a2c40",
+      "token_type": "github_pat",
+      "token_value": "ghp_RfoslmPtHHsOuXAoOsprbffJq7yrYqCk2W9a",
+      "token_hash": "a0212f4e9d3a2c400c8d86d0766e39a1f23b56eaacd972269c539928408560fe",
+      "created_at": "2025-11-22T03:46:36.108825",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpx9zs5ehr\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "242c290d83561526",
+      "token_type": "github_pat",
+      "token_value": "ghp_QjwHa2F8ipxGhSz7jMyG9hy6XmsaNjkXntVv",
+      "token_hash": "242c290d835615262a0fafdbea9391e579990e9ad9be36a12d6c046d996635ae",
+      "created_at": "2025-11-22T03:46:36.109271",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpx9zs5ehr\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "3527990ffaa88baa",
+      "token_type": "github_pat",
+      "token_value": "ghp_dNwcOqy5rzWOHt4lPEFSMez0b84lockwVFiF",
+      "token_hash": "3527990ffaa88baabd81333ec2cace018b93a7aa2c15ab5a5fdf0d568af4c340",
+      "created_at": "2025-11-22T03:46:36.134051",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpzskh7u2l\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "36082668dc0a2607",
+      "token_type": "github_pat",
+      "token_value": "ghp_wqb75NwiR45o9v4Co0w3H08OnTZosBbRsieW",
+      "token_hash": "36082668dc0a26074cc42ac5de911026bad397afecec2becfc9d20109e800d53",
+      "created_at": "2025-11-22T03:46:36.134655",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpzskh7u2l\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "6cd7889ee3620b82",
+      "token_type": "github_pat",
+      "token_value": "ghp_MrF9RUNZuH8RW9XfefrDy9ciKb9SZP1b3JC8",
+      "token_hash": "6cd7889ee3620b82fa15d03675744f9425b8aafe5e177dff85bf202dce444ebc",
+      "created_at": "2025-11-22T03:48:05.086868",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3z54sw1g\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "80e7d40d5dca0fe1",
+      "token_type": "github_pat",
+      "token_value": "ghp_80fKOr8PW7irsqlHX8AMqJ4VrT2gT6nZqtig",
+      "token_hash": "80e7d40d5dca0fe109bca6d0afa962d9b44c41c5ba180aa4c58701501515da22",
+      "created_at": "2025-11-22T03:48:05.087638",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3z54sw1g\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "399daa38ee30ccd0",
+      "token_type": "github_pat",
+      "token_value": "ghp_BtVDXJ6zigrYjkusg0e7ryNHbR7EiP7sMv8C",
+      "token_hash": "399daa38ee30ccd0eb25cdfeb18df1dd4fa040c4442ea31008e0b061a35277af",
+      "created_at": "2025-11-22T03:48:05.088517",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3z54sw1g\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "ea81898462975b90",
+      "token_type": "github_pat",
+      "token_value": "ghp_KNRQtX2RS8FjgUWIIquVfo08QIP0T9BCRdCe",
+      "token_hash": "ea81898462975b902a0023e07d65fb3a833d05f0974d85f66847a38026029d46",
+      "created_at": "2025-11-22T03:48:05.111309",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpudlbbw9r\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "e6dd8c8cf936e5b7",
+      "token_type": "github_pat",
+      "token_value": "ghp_qC6OmazmxvgXp64VzNFRdd2lEpj53EqcZ97x",
+      "token_hash": "e6dd8c8cf936e5b70c42d56375cc993baa16a72f65debb733bc9b57023bc315f",
+      "created_at": "2025-11-22T03:48:05.112044",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpudlbbw9r\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "b1c634215f7f462d",
+      "token_type": "github_pat",
+      "token_value": "ghp_B21zLP5whiHNvuF1Wkns0zCZYhIZE5XN1rDg",
+      "token_hash": "b1c634215f7f462d31ff3ab66c3c6ee2acdae9c5f75ef1aeb3712e1e9300e5a3",
+      "created_at": "2025-11-22T03:48:23.784931",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpuhtg9om8\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "ce99c4e03618d31f",
+      "token_type": "github_pat",
+      "token_value": "ghp_EuE8QY8E6O0E7xUrd0gznB98IMH4IIVLDCBO",
+      "token_hash": "ce99c4e03618d31f5917bfdc51f0a9048c0025d31cfa1cb95ac43feb7d2ca54e",
+      "created_at": "2025-11-22T03:48:23.786329",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpuhtg9om8\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "16bb6d0e38e8c4d5",
+      "token_type": "github_pat",
+      "token_value": "ghp_VjdsAGC6wLKJuEKpWRDWfSYjumYF2S6mID7s",
+      "token_hash": "16bb6d0e38e8c4d52f6bdbb4531d0782df656abd8f143ae6468b852964bf8ff1",
+      "created_at": "2025-11-22T03:48:23.787602",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpuhtg9om8\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "402beef30e98cd98",
+      "token_type": "github_pat",
+      "token_value": "ghp_sNIS0yxPR4vyAMmmvwFcf298Pw8vLfTr2eKH",
+      "token_hash": "402beef30e98cd98dc2fc74e80ca8931df3bf58ce16e2c555924af591288b500",
+      "created_at": "2025-11-22T03:48:23.814280",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmptg08xs4v\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "e8f48151a9dcb969",
+      "token_type": "github_pat",
+      "token_value": "ghp_wikD8n8t4Fjqr7rS6B4Sg4sOT64DsPxNeBBy",
+      "token_hash": "e8f48151a9dcb969c94c2c27a9ff1ad72c466fcd913326115dd03d90693740d4",
+      "created_at": "2025-11-22T03:48:23.815504",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmptg08xs4v\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "ff8f5d1e4e564533",
+      "token_type": "github_pat",
+      "token_value": "ghp_faNqqmL6zaH5wmBvojoCFyWNmuYegO70ZuWe",
+      "token_hash": "ff8f5d1e4e564533e2261d08c0579f1c6f6d9ef0d0047375a7f7cb526f53a2d5",
+      "created_at": "2025-11-22T03:51:08.432718",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "94415de764f090c0",
+      "token_type": "github_pat",
+      "token_value": "ghp_Jz9UNn84ABcvMLWTaRIcqUzEppab8miy0rkE",
+      "token_hash": "94415de764f090c0d5cc087c31abeafb16bf3e317b859b616ed440c370df34f2",
+      "created_at": "2025-11-22T03:51:08.433672",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "8422aa5432412bdb",
+      "token_type": "github_pat",
+      "token_value": "ghp_OCA17D4wBEGaxkCDXOJ5ctCS7NokSooyftVD",
+      "token_hash": "8422aa5432412bdb8cd4f72e1d4bea68880c06423cec390995bcaf44d2cab62e",
+      "created_at": "2025-11-22T03:51:08.434471",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "7a2f262548c0484e",
+      "token_type": "github_pat",
+      "token_value": "ghp_iNmfzDqESEOa4FdIhOYJyTOjKVYre822BO2k",
+      "token_hash": "7a2f262548c0484efd8d0003afa13d73177b49751da704a1771486709710c3bc",
+      "created_at": "2025-11-22T03:51:16.559857",
+      "metadata": {
+        "purpose": "detection",
+        "environment": "test",
+        "batch_id": "20251122035116",
+        "index": 0
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "1256632512a0b048",
+      "token_type": "github_pat",
+      "token_value": "ghp_e84RgfGE9oWtIMjQnPDQKPYa5s8CqbtMO0Co",
+      "token_hash": "1256632512a0b048caa89bdd64547a070d5b89e8d7c0364097c34010b4452987",
+      "created_at": "2025-11-22T03:51:16.560951",
+      "metadata": {
+        "purpose": "detection",
+        "environment": "test",
+        "batch_id": "20251122035116",
+        "index": 1
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "81f7b9589138de83",
+      "token_type": "github_oauth",
+      "token_value": "gho_xg7Z6eP9IkoOQIm3wPvEmOmWWTU0WArSSNe2",
+      "token_hash": "81f7b9589138de83c47a042d4694082ffab2b15111763875112af8af5c529cb3",
+      "created_at": "2025-11-22T03:51:16.561883",
+      "metadata": {
+        "purpose": "detection",
+        "environment": "test",
+        "batch_id": "20251122035116",
+        "index": 0
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "a16ef645875823f3",
+      "token_type": "github_oauth",
+      "token_value": "gho_oVrCQEuC9Ddtv75pCnV85EKMDGu4Q0hZbYiL",
+      "token_hash": "a16ef645875823f3b7abacb4bfdae3f13d6434064a6a851e000bffdb76cd7c8d",
+      "created_at": "2025-11-22T03:51:16.562816",
+      "metadata": {
+        "purpose": "detection",
+        "environment": "test",
+        "batch_id": "20251122035116",
+        "index": 1
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "a50dc3e77c12d113",
+      "token_type": "aws_access",
+      "token_value": "AKIAHC43TDVXLBK3F1XM",
+      "token_hash": "a50dc3e77c12d11357afd6629e63a19dacdbe1b38bb9b8e8faee4e3d500b6f9f",
+      "created_at": "2025-11-22T03:51:16.563755",
+      "metadata": {
+        "purpose": "detection",
+        "environment": "test",
+        "batch_id": "20251122035116",
+        "index": 0
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "1a79ffd660034cd2",
+      "token_type": "aws_access",
+      "token_value": "AKIATOBII1QWU2T8XGZR",
+      "token_hash": "1a79ffd660034cd2c4eeb730553fe97b0e98927e3ab960302898484e933b6d69",
+      "created_at": "2025-11-22T03:51:16.564764",
+      "metadata": {
+        "purpose": "detection",
+        "environment": "test",
+        "batch_id": "20251122035116",
+        "index": 1
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "654f8306f5abe70c",
+      "token_type": "github_pat",
+      "token_value": "ghp_2wirsmpIigTH3OFVFhtkwMTGn5WdWqd4TnCm",
+      "token_hash": "654f8306f5abe70c881eecc77bba2127b2f9c91173e4a385f14f95226710130c",
+      "created_at": "2025-11-22T03:51:52.522916",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "4245f4bad99bf696",
+      "token_type": "github_pat",
+      "token_value": "ghp_Gmfw9tWCiAtXD3zVZrRapIUmVWQTc7G8vhGf",
+      "token_hash": "4245f4bad99bf696522631230d35913d8584b134d6b9fe44acaaf941e38b3abd",
+      "created_at": "2025-11-22T03:51:52.524685",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "38b4ce58e06f028d",
+      "token_type": "github_pat",
+      "token_value": "ghp_6GP8Ha2WWFU3gk1wNn2Rx6pHjiKnJR8L9TQ7",
+      "token_hash": "38b4ce58e06f028d648863cb3a8ba9646ec86ab771bf00fbf95ff9ea1b39a264",
+      "created_at": "2025-11-22T03:51:52.526338",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "e0333dccc0c72254",
+      "token_type": "github_pat",
+      "token_value": "ghp_xHqipkIl1IuEHHWj4HnBxZRq7qdXLeBTgzN2",
+      "token_hash": "e0333dccc0c722542935dd0d3d5fe1446b6156e27281b6957f8775396e9f2c9e",
+      "created_at": "2025-11-22T03:51:52.529076",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo\\README.md",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "d481b3e2ce4193ad",
+      "token_type": "github_pat",
+      "token_value": "ghp_coXebAaqyHAYvQTBG7LWbwZvisLhi1H75dVl",
+      "token_hash": "d481b3e2ce4193ad2300c923d75413cd7ab524839cb846ee47fc525de670cb0c",
+      "created_at": "2025-11-22T03:51:52.530243",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo\\README.md",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "adaa524da9925c0c",
+      "token_type": "github_pat",
+      "token_value": "ghp_y77yYodEuCiq6cBG1hCsdRK0pTFHmp9YZ57O",
+      "token_hash": "adaa524da9925c0c486774084c47592106e34ac7861c27c0334a74c7efdebca8",
+      "created_at": "2025-11-22T03:51:52.531367",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo\\README.md",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "83a9fcf7d8931d25",
+      "token_type": "github_pat",
+      "token_value": "ghp_sHLVeKG0LcS1dEkRTgRGGx7fQNejiC9TswUz",
+      "token_hash": "83a9fcf7d8931d257bfb5f51623fb071aa7ec7ff66bfeb4429271f3023163fbb",
+      "created_at": "2025-11-22T03:53:56.912489",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3q6afx84\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "b4c710c674a810ac",
+      "token_type": "github_pat",
+      "token_value": "ghp_hwafE55b7L2t53AH8W17sexmjcoB56lRnci6",
+      "token_hash": "b4c710c674a810ac2644b6dd2a5e9b87d37b0e15d7b97d6274bc7862b43b7929",
+      "created_at": "2025-11-22T03:53:56.913954",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3q6afx84\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "27105d052d6f240d",
+      "token_type": "github_pat",
+      "token_value": "ghp_sWl2Cu0aEHqDrj2aeHDJVc5wFc5PY9MAgoKr",
+      "token_hash": "27105d052d6f240d117f5f2490e3bbc99e7661f99fd10fbd2cdb539574927f45",
+      "created_at": "2025-11-22T03:53:56.915321",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3q6afx84\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "27f474e5a192a4be",
+      "token_type": "github_pat",
+      "token_value": "ghp_LEOOX1M4kNWfsW6XGbByWPZqBkR983Pho3P9",
+      "token_hash": "27f474e5a192a4bec960d6423dee03f809b1e1a7f34ee8a334b9cff2d7163367",
+      "created_at": "2025-11-22T03:53:56.942786",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpuq6bc_i6\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "ff08ab8eacf49bf7",
+      "token_type": "github_pat",
+      "token_value": "ghp_OYXvd1lDOmcuzTPT42OPNRBpUmIY0ObB61pF",
+      "token_hash": "ff08ab8eacf49bf79636b97a7d1cba1ed944b65feefb622fc2367f8534207a4b",
+      "created_at": "2025-11-22T03:53:56.944751",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpuq6bc_i6\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "38560e27fa1d3c8a",
+      "token_type": "github_pat",
+      "token_value": "ghp_AzAa1AOk6cgXZhLgoy4taao2L99v5IakskM0",
+      "token_hash": "38560e27fa1d3c8a9dbb57adbe2b9bcf30322fe188bd6cfdeafb791bfa13e0e5",
+      "created_at": "2025-11-22T04:23:46.467617",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "6bb4a88662b455c8",
+      "token_type": "github_pat",
+      "token_value": "ghp_bypTA4CykI5ENGcb5dCNNOjWQKb7oUcevItx",
+      "token_hash": "6bb4a88662b455c87bd423f3e6c377d6c4e1208c06f3dfefbcf84d93774fd072",
+      "created_at": "2025-11-22T04:23:46.469997",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "31e9646f2c4916e3",
+      "token_type": "github_pat",
+      "token_value": "ghp_a3BfIW70mmbTkyFizDbR6Nv5AGRtARTYlSXQ",
+      "token_hash": "31e9646f2c4916e393551548ebe44c7db101752d6a9dd1bc162e23c793190e92",
+      "created_at": "2025-11-22T04:23:46.471529",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "4957536346079080",
+      "token_type": "github_pat",
+      "token_value": "ghp_cP3HSns1ZyDbA9aFqqrVhIEhsDB68YvDEOxK",
+      "token_hash": "49575363460790809d20da37ad3c0c07e597ecfe08d781729beb0f696ac75805",
+      "created_at": "2025-11-22T04:23:46.473986",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "8c82f51f2e2974ce",
+      "token_type": "github_pat",
+      "token_value": "ghp_Dqfbhd9mDcTWZzrdqWVBJFrBvu3CtVenUyz8",
+      "token_hash": "8c82f51f2e2974ce6b3e28053e5faae01c98c9fe696ef36a3c4a6db5ebc566b4",
+      "created_at": "2025-11-22T04:23:46.475927",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "447fc00236ec7ba3",
+      "token_type": "aws_access",
+      "token_value": "AKIASX3H0KMRRJM1YL7X",
+      "token_hash": "447fc00236ec7ba39da8eee5bcd1081b7a13dd010e3e226345b93b0919105a83",
+      "created_at": "2025-11-22T04:26:50.595846",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "c4f5d3f459a893e7",
+      "token_type": "aws_access",
+      "token_value": "AKIAGKD3QPW4USB9KASA",
+      "token_hash": "c4f5d3f459a893e7373ac1cc000f444aeac567c4e9f4a9bdc766513ca01b8a98",
+      "created_at": "2025-11-22T04:26:50.598290",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "fa126161379f0280",
+      "token_type": "aws_access",
+      "token_value": "AKIAAJWGJPOC8ZPHXU7V",
+      "token_hash": "fa126161379f0280b2f5ac4425d2d3f63bc97f6380d36b0b3732bb074eea99f7",
+      "created_at": "2025-11-22T04:26:50.599917",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "4d212448a3ad4b22",
+      "token_type": "slack",
+      "token_value": "xoxb-08496161770-24186411819-4vMh2K5ARAijC1Y2E6olyfGe",
+      "token_hash": "4d212448a3ad4b226fbe14f0ea4fb4f4c51fb451b4a97382eafa19938c8e52fa",
+      "created_at": "2025-11-22T04:26:58.517400",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "588323ae4683b90b",
+      "token_type": "slack",
+      "token_value": "xoxb-23821134649-96202889242-IYhFtAwCDhhz29WnQQPSlp6r",
+      "token_hash": "588323ae4683b90b02e381696a5ca2ea1c94407b570bb05904e2e8e921c17a7c",
+      "created_at": "2025-11-22T04:26:58.519443",
+      "metadata": {},
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "f22a4d6e49368352",
+      "token_type": "github_pat",
+      "token_value": "ghp_JubQokoNXyGVgz1ARarBHGs81GJDOGv3NXs7",
+      "token_hash": "f22a4d6e49368352e62799d8d9ebd477c73ebddb5fc135a6124f2356ffd24c65",
+      "created_at": "2025-11-22T04:30:01.104128",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo2\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "dc546f55d45540fa",
+      "token_type": "github_pat",
+      "token_value": "ghp_eYAO9dxQagUlytE9avVNyANO1dEwXHREHPaf",
+      "token_hash": "dc546f55d45540fa3911a75ca59d3cf653aa17d79af10dc1a07eea598226c089",
+      "created_at": "2025-11-22T04:30:01.106473",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo2\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "496446c277d8b37b",
+      "token_type": "github_pat",
+      "token_value": "ghp_459g6SmRqbzP6MGlWe7z4Mgr7Oxekt0S1nYX",
+      "token_hash": "496446c277d8b37b10c75c3e3a3e8606e1fcbb477a2a2390f3dc634050b7d7c3",
+      "created_at": "2025-11-22T04:30:01.108244",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo2\\.env.example",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "744373542ccc6164",
+      "token_type": "github_pat",
+      "token_value": "ghp_2fu4F5exDXHi1z6gQ4o6vjZ1Zhx0oNNdvlBX",
+      "token_hash": "744373542ccc61648682ae6781a25eb94ae8a3c949a917fa782519ad552194d3",
+      "created_at": "2025-11-22T04:30:01.111194",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo2\\README.md",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "edfa89271332843d",
+      "token_type": "github_pat",
+      "token_value": "ghp_3InGCfg2gEcV3erApRi1DODeXI9zKvf9tGrV",
+      "token_hash": "edfa89271332843d337d5c97b6515e7f662a66e1475d472812272669109c72f0",
+      "created_at": "2025-11-22T04:30:01.112784",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo2\\README.md",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    },
+    {
+      "token_id": "d21f07b19b2ae4ba",
+      "token_type": "github_pat",
+      "token_value": "ghp_jfvC4wXqDrBsFolGrGnsIzWXKxyCoSZCTFlZ",
+      "token_hash": "d21f07b19b2ae4babb925570ee72d3771967806c3ee70ae71483d2a9ad2968cf",
+      "created_at": "2025-11-22T04:30:01.114366",
+      "metadata": {
+        "injection_method": "honeypot_file",
+        "file_path": "./demo-repo2\\README.md",
+        "purpose": "detection"
+      },
+      "detected": false,
+      "detection_count": 0,
+      "last_detected": null
+    }
+  ]
+}

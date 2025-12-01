@@ -1,0 +1,324 @@
+{
+  "injections": [
+    {
+      "injection_id": "20251122034636108757",
+      "timestamp": "2025-11-22T03:46:36.108785",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpx9zs5ehr\\.env.example",
+      "token_value": "ghp_IyHCsPwHxXfFanAmopAQreJCFS1VCtuDd4X1",
+      "token_id": "179202c4f5566b68",
+      "key_name": "SECRET_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034636109219",
+      "timestamp": "2025-11-22T03:46:36.109233",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpx9zs5ehr\\.env.example",
+      "token_value": "ghp_RfoslmPtHHsOuXAoOsprbffJq7yrYqCk2W9a",
+      "token_id": "a0212f4e9d3a2c40",
+      "key_name": "GITHUB_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034636109656",
+      "timestamp": "2025-11-22T03:46:36.109669",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpx9zs5ehr\\.env.example",
+      "token_value": "ghp_QjwHa2F8ipxGhSz7jMyG9hy6XmsaNjkXntVv",
+      "token_id": "242c290d83561526",
+      "key_name": "GITHUB_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034636134590",
+      "timestamp": "2025-11-22T03:46:36.134614",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpzskh7u2l\\.env.example",
+      "token_value": "ghp_dNwcOqy5rzWOHt4lPEFSMez0b84lockwVFiF",
+      "token_id": "3527990ffaa88baa",
+      "key_name": "SECRET_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034636135406",
+      "timestamp": "2025-11-22T03:46:36.135424",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpzskh7u2l\\.env.example",
+      "token_value": "ghp_wqb75NwiR45o9v4Co0w3H08OnTZosBbRsieW",
+      "token_id": "36082668dc0a2607",
+      "key_name": "GITHUB_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034636166969",
+      "timestamp": "2025-11-22T03:46:36.166994",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp93wd94zs\\test.env",
+      "token_value": "ghp_test1234567890abcdefghijklmnopqrstuvwxyz",
+      "key_name": "TEST_TOKEN",
+      "method": "file_injection"
+    },
+    {
+      "injection_id": "20251122034805087552",
+      "timestamp": "2025-11-22T03:48:05.087583",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3z54sw1g\\.env.example",
+      "token_value": "ghp_MrF9RUNZuH8RW9XfefrDy9ciKb9SZP1b3JC8",
+      "token_id": "6cd7889ee3620b82",
+      "key_name": "API_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034805088431",
+      "timestamp": "2025-11-22T03:48:05.088458",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3z54sw1g\\.env.example",
+      "token_value": "ghp_80fKOr8PW7irsqlHX8AMqJ4VrT2gT6nZqtig",
+      "token_id": "80e7d40d5dca0fe1",
+      "key_name": "AWS_ACCESS_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034805089113",
+      "timestamp": "2025-11-22T03:48:05.089127",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3z54sw1g\\.env.example",
+      "token_value": "ghp_BtVDXJ6zigrYjkusg0e7ryNHbR7EiP7sMv8C",
+      "token_id": "399daa38ee30ccd0",
+      "key_name": "AWS_ACCESS_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034805111983",
+      "timestamp": "2025-11-22T03:48:05.112003",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpudlbbw9r\\.env.example",
+      "token_value": "ghp_KNRQtX2RS8FjgUWIIquVfo08QIP0T9BCRdCe",
+      "token_id": "ea81898462975b90",
+      "key_name": "SECRET_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034805112636",
+      "timestamp": "2025-11-22T03:48:05.112649",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpudlbbw9r\\.env.example",
+      "token_value": "ghp_qC6OmazmxvgXp64VzNFRdd2lEpj53EqcZ97x",
+      "token_id": "e6dd8c8cf936e5b7",
+      "key_name": "GITHUB_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034805140952",
+      "timestamp": "2025-11-22T03:48:05.140980",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp6mfar3a5\\test.env",
+      "token_value": "ghp_test1234567890abcdefghijklmnopqrstuvwxyz",
+      "key_name": "TEST_TOKEN",
+      "method": "file_injection"
+    },
+    {
+      "injection_id": "20251122034823785912",
+      "timestamp": "2025-11-22T03:48:23.785964",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpuhtg9om8\\.env.example",
+      "token_value": "ghp_B21zLP5whiHNvuF1Wkns0zCZYhIZE5XN1rDg",
+      "token_id": "b1c634215f7f462d",
+      "key_name": "AWS_ACCESS_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034823787499",
+      "timestamp": "2025-11-22T03:48:23.787528",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpuhtg9om8\\.env.example",
+      "token_value": "ghp_EuE8QY8E6O0E7xUrd0gznB98IMH4IIVLDCBO",
+      "token_id": "ce99c4e03618d31f",
+      "key_name": "SECRET_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034823788778",
+      "timestamp": "2025-11-22T03:48:23.788816",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpuhtg9om8\\.env.example",
+      "token_value": "ghp_VjdsAGC6wLKJuEKpWRDWfSYjumYF2S6mID7s",
+      "token_id": "16bb6d0e38e8c4d5",
+      "key_name": "AWS_ACCESS_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034823815434",
+      "timestamp": "2025-11-22T03:48:23.815456",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmptg08xs4v\\.env.example",
+      "token_value": "ghp_sNIS0yxPR4vyAMmmvwFcf298Pw8vLfTr2eKH",
+      "token_id": "402beef30e98cd98",
+      "key_name": "API_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034823816375",
+      "timestamp": "2025-11-22T03:48:23.816391",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmptg08xs4v\\.env.example",
+      "token_value": "ghp_wikD8n8t4Fjqr7rS6B4Sg4sOT64DsPxNeBBy",
+      "token_id": "e8f48151a9dcb969",
+      "key_name": "SECRET_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122034823852668",
+      "timestamp": "2025-11-22T03:48:23.852709",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpgb5rt8bx\\test.env",
+      "token_value": "ghp_test1234567890abcdefghijklmnopqrstuvwxyz",
+      "key_name": "TEST_TOKEN",
+      "method": "file_injection"
+    },
+    {
+      "injection_id": "20251122035152524460",
+      "timestamp": "2025-11-22T03:51:52.524608",
+      "file_path": "./demo-repo\\.env.example",
+      "token_value": "ghp_2wirsmpIigTH3OFVFhtkwMTGn5WdWqd4TnCm",
+      "token_id": "654f8306f5abe70c",
+      "key_name": "SECRET_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035152526207",
+      "timestamp": "2025-11-22T03:51:52.526254",
+      "file_path": "./demo-repo\\.env.example",
+      "token_value": "ghp_Gmfw9tWCiAtXD3zVZrRapIUmVWQTc7G8vhGf",
+      "token_id": "4245f4bad99bf696",
+      "key_name": "SECRET_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035152527540",
+      "timestamp": "2025-11-22T03:51:52.527558",
+      "file_path": "./demo-repo\\.env.example",
+      "token_value": "ghp_6GP8Ha2WWFU3gk1wNn2Rx6pHjiKnJR8L9TQ7",
+      "token_id": "38b4ce58e06f028d",
+      "key_name": "AWS_ACCESS_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035152530181",
+      "timestamp": "2025-11-22T03:51:52.530199",
+      "file_path": "./demo-repo\\README.md",
+      "token_value": "ghp_xHqipkIl1IuEHHWj4HnBxZRq7qdXLeBTgzN2",
+      "token_id": "e0333dccc0c72254",
+      "key_name": "TOKEN_1",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035152531315",
+      "timestamp": "2025-11-22T03:51:52.531327",
+      "file_path": "./demo-repo\\README.md",
+      "token_value": "ghp_coXebAaqyHAYvQTBG7LWbwZvisLhi1H75dVl",
+      "token_id": "d481b3e2ce4193ad",
+      "key_name": "TOKEN_2",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035152532433",
+      "timestamp": "2025-11-22T03:51:52.532445",
+      "file_path": "./demo-repo\\README.md",
+      "token_value": "ghp_y77yYodEuCiq6cBG1hCsdRK0pTFHmp9YZ57O",
+      "token_id": "adaa524da9925c0c",
+      "key_name": "TOKEN_3",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035356913861",
+      "timestamp": "2025-11-22T03:53:56.913891",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3q6afx84\\.env.example",
+      "token_value": "ghp_sHLVeKG0LcS1dEkRTgRGGx7fQNejiC9TswUz",
+      "token_id": "83a9fcf7d8931d25",
+      "key_name": "API_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035356915256",
+      "timestamp": "2025-11-22T03:53:56.915273",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3q6afx84\\.env.example",
+      "token_value": "ghp_hwafE55b7L2t53AH8W17sexmjcoB56lRnci6",
+      "token_id": "b4c710c674a810ac",
+      "key_name": "SECRET_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035356916526",
+      "timestamp": "2025-11-22T03:53:56.916539",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp3q6afx84\\.env.example",
+      "token_value": "ghp_sWl2Cu0aEHqDrj2aeHDJVc5wFc5PY9MAgoKr",
+      "token_id": "27105d052d6f240d",
+      "key_name": "GITHUB_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035356944628",
+      "timestamp": "2025-11-22T03:53:56.944669",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpuq6bc_i6\\.env.example",
+      "token_value": "ghp_LEOOX1M4kNWfsW6XGbByWPZqBkR983Pho3P9",
+      "token_id": "27f474e5a192a4be",
+      "key_name": "API_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035356946195",
+      "timestamp": "2025-11-22T03:53:56.946213",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmpuq6bc_i6\\.env.example",
+      "token_value": "ghp_OYXvd1lDOmcuzTPT42OPNRBpUmIY0ObB61pF",
+      "token_id": "ff08ab8eacf49bf7",
+      "key_name": "AWS_ACCESS_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122035356985287",
+      "timestamp": "2025-11-22T03:53:56.985312",
+      "file_path": "C:\\Users\\monit\\AppData\\Local\\Temp\\tmp9ar33dg6\\test.env",
+      "token_value": "ghp_test1234567890abcdefghijklmnopqrstuvwxyz",
+      "key_name": "TEST_TOKEN",
+      "method": "file_injection"
+    },
+    {
+      "injection_id": "20251122043001106213",
+      "timestamp": "2025-11-22T04:30:01.106395",
+      "file_path": "./demo-repo2\\.env.example",
+      "token_value": "ghp_JubQokoNXyGVgz1ARarBHGs81GJDOGv3NXs7",
+      "token_id": "f22a4d6e49368352",
+      "key_name": "GITHUB_TOKEN",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122043001108172",
+      "timestamp": "2025-11-22T04:30:01.108189",
+      "file_path": "./demo-repo2\\.env.example",
+      "token_value": "ghp_eYAO9dxQagUlytE9avVNyANO1dEwXHREHPaf",
+      "token_id": "dc546f55d45540fa",
+      "key_name": "AWS_ACCESS_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122043001109760",
+      "timestamp": "2025-11-22T04:30:01.109774",
+      "file_path": "./demo-repo2\\.env.example",
+      "token_value": "ghp_459g6SmRqbzP6MGlWe7z4Mgr7Oxekt0S1nYX",
+      "token_id": "496446c277d8b37b",
+      "key_name": "AWS_ACCESS_KEY",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122043001112728",
+      "timestamp": "2025-11-22T04:30:01.112742",
+      "file_path": "./demo-repo2\\README.md",
+      "token_value": "ghp_2fu4F5exDXHi1z6gQ4o6vjZ1Zhx0oNNdvlBX",
+      "token_id": "744373542ccc6164",
+      "key_name": "TOKEN_1",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122043001114314",
+      "timestamp": "2025-11-22T04:30:01.114327",
+      "file_path": "./demo-repo2\\README.md",
+      "token_value": "ghp_3InGCfg2gEcV3erApRi1DODeXI9zKvf9tGrV",
+      "token_id": "edfa89271332843d",
+      "key_name": "TOKEN_2",
+      "method": "honeypot_file_creation"
+    },
+    {
+      "injection_id": "20251122043001115948",
+      "timestamp": "2025-11-22T04:30:01.115960",
+      "file_path": "./demo-repo2\\README.md",
+      "token_value": "ghp_jfvC4wXqDrBsFolGrGnsIzWXKxyCoSZCTFlZ",
+      "token_id": "d21f07b19b2ae4ba",
+      "key_name": "TOKEN_3",
+      "method": "honeypot_file_creation"
+    }
+  ]
+}

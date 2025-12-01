@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  # Main honeytoken detection service
+  honeytoken-detector:
+    build: .
+    container_name: honeytoken-detector
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+      - ./.env:/app/.env
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=INFO
+    env_file:
+      - .env
+    restart: unless-stopped
+    networks:
+      - honeytoken-network
+    command: python webhook_server.py --host 0.0.0.0 --port 8080
+
+  # Scanner service (runs periodic scans)
+  scanner:
+    build: .
+    container_name: honeytoken-scanner
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+      - ./.env:/app/.env
+      - ${SCAN_TARGET:-./}:/scan-target:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=INFO
+    env_file:
+      - .env
+    restart: "no"
+    networks:
+      - honeytoken-network
+    command: python token_scanner.py /scan-target
+    profiles:
+      - scanner
+
+  # Dashboard web server
+  dashboard:
+    image: nginx:alpine
+    container_name: honeytoken-dashboard
+    ports:
+      - "8081:80"
+    volumes:
+      - ./dashboard.html:/usr/share/nginx/html/index.html:ro
+      - ./data:/usr/share/nginx/html/data:ro
+      - ./honeytokens.json:/usr/share/nginx/html/honeytokens.json:ro
+      - ./scan_results.json:/usr/share/nginx/html/scan_results.json:ro
+      - ./alert_history.json:/usr/share/nginx/html/alert_history.json:ro
+      - ./webhook_events.json:/usr/share/nginx/html/webhook_events.json:ro
+    restart: unless-stopped
+    networks:
+      - honeytoken-network
+    depends_on:
+      - honeytoken-detector
+
+networks:
+  honeytoken-network:
+    driver: bridge
+
+volumes:
+  data:
+  logs:
+  reports:

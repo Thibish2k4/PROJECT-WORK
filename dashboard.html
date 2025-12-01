@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honeytoken Detection Dashboard - Cybersecurity Monitoring</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: #0f1419;
+            color: #e6edf3;
+            min-height: 100vh;
+            padding: 0;
+        }
+        
+        /* Sidebar Navigation */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 260px;
+            height: 100vh;
+            background: #161b22;
+            border-right: 1px solid #30363d;
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #f6b73c 0%, #f39c12 100%);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(246, 183, 60, 0.3);
+        }
+        
+        .logo i {
+            font-size: 28px;
+            color: #0f1419;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h2 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0f1419;
+            line-height: 1.2;
+        }
+        
+        .logo-text span {
+            font-size: 11px;
+            color: rgba(15, 20, 25, 0.7);
+            font-weight: 500;
+        }
+        
+        .nav-menu {
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-bottom: 8px;
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            color: #7d8590;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            background: #21262d;
+            color: #e6edf3;
+        }
+        
+        .nav-link.active {
+            background: #1f6feb;
+            color: #ffffff;
+        }
+        
+        .nav-link i {
+            width: 20px;
+            text-align: center;
+        }
+        
+        .nav-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #30363d;
+        }
+        
+        .nav-section-title {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #7d8590;
+            padding: 0 16px 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-left: 260px;
+            padding: 0;
+        }
+        
+        /* Top Bar */
+        .top-bar {
+            background: #161b22;
+            border-bottom: 1px solid #30363d;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .page-title {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .page-title h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #e6edf3;
+        }
+        
+        .page-title p {
+            font-size: 13px;
+            color: #7d8590;
+        }
+        
+        .top-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3fb950;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        
+        .btn-sm {
+            padding: 8px 14px;
+            font-size: 13px;
+        }
+        
+        .btn-primary {
+            background: #1f6feb;
+            color: #ffffff;
+        }
+        
+        .btn-primary:hover {
+            background: #1a5cd7;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(31, 111, 235, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #21262d;
+            color: #e6edf3;
+            border: 1px solid #30363d;
+        }
+        
+        .btn-secondary:hover {
+            background: #30363d;
+            border-color: #484f58;
+        }
+        
+        /* Content Area */
+        .content-area {
+            padding: 30px 40px;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            padding: 24px;
+            border-radius: 12px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), transparent);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border-color: #484f58;
+        }
+        
+        .stat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        
+        .stat-card h3 {
+            color: #7d8590;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .stat-value {
+            font-size: 42px;
+            font-weight: 700;
+            color: #e6edf3;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        .stat-change {
+            font-size: 13px;
+            color: #7d8590;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .stat-change.positive {
+            color: #3fb950;
+        }
+        
+        .stat-change.negative {
+            color: #f85149;
+        }
+        
+        .stat-card.critical {
+            --accent-color: #f85149;
+        }
+        
+        .stat-card.critical .stat-icon {
+            background: rgba(248, 81, 73, 0.1);
+            color: #f85149;
+        }
+        
+        .stat-card.warning {
+            --accent-color: #d29922;
+        }
+        
+        .stat-card.warning .stat-icon {
+            background: rgba(210, 153, 34, 0.1);
+            color: #d29922;
+        }
+        
+        .stat-card.success {
+            --accent-color: #3fb950;
+        }
+        
+        .stat-card.success .stat-icon {
+            background: rgba(63, 185, 80, 0.1);
+            color: #3fb950;
+        }
+        
+        .stat-card.info {
+            --accent-color: #1f6feb;
+        }
+        
+        .stat-card.info .stat-icon {
+            background: rgba(31, 111, 235, 0.1);
+            color: #1f6feb;
+        }
+        
+        /* Panel Styles */
+        .panel {
+            background: #161b22;
+            border: 1px solid #30363d;
+            padding: 28px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        .panel h2 {
+            color: #e6edf3;
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .panel h2 i {
+            color: #7d8590;
+        }
+        
+        .panel-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        thead {
+            background: #0d1117;
+        }
+        
+        th {
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 12px;
+            color: #7d8590;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #30363d;
+            white-space: nowrap;
+        }
+        
+        td {
+            padding: 16px;
+            border-bottom: 1px solid #21262d;
+            font-size: 14px;
+            color: #e6edf3;
+        }
+        
+        tbody tr {
+            transition: all 0.2s;
+        }
+        
+        tbody tr:hover {
+            background: #0d1117;
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 8px;
+        }
+        
+        /* Badge Styles */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .badge i {
+            font-size: 10px;
+        }
+        
+        .badge.critical {
+            background: rgba(248, 81, 73, 0.15);
+            color: #f85149;
+            border: 1px solid rgba(248, 81, 73, 0.3);
+        }
+        
+        .badge.warning {
+            background: rgba(210, 153, 34, 0.15);
+            color: #d29922;
+            border: 1px solid rgba(210, 153, 34, 0.3);
+        }
+        
+        .badge.success {
+            background: rgba(63, 185, 80, 0.15);
+            color: #3fb950;
+            border: 1px solid rgba(63, 185, 80, 0.3);
+        }
+        
+        .badge.info {
+            background: rgba(31, 111, 235, 0.15);
+            color: #1f6feb;
+            border: 1px solid rgba(31, 111, 235, 0.3);
+        }
+        
+        .badge.neutral {
+            background: rgba(125, 133, 144, 0.15);
+            color: #7d8590;
+            border: 1px solid rgba(125, 133, 144, 0.3);
+        }
+        
+        /* Code Elements */
+        code {
+            background: #0d1117;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            color: #79c0ff;
+            border: 1px solid #30363d;
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #7d8590;
+        }
+        
+        .empty-state i {
+            font-size: 64px;
+            color: #30363d;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .empty-state h3 {
+            font-size: 18px;
+            color: #7d8590;
+            margin-bottom: 8px;
+        }
+        
+        .empty-state p {
+            font-size: 14px;
+            color: #484f58;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #1f6feb;
+            border: 3px solid #161b22;
+            z-index: 1;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -27px;
+            top: 20px;
+            width: 2px;
+            height: calc(100% - 12px);
+            background: #30363d;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .timeline-item.critical::before {
+            background: #f85149;
+        }
+        
+        .timeline-item.warning::before {
+            background: #d29922;
+        }
+        
+        .timeline-item.success::before {
+            background: #3fb950;
+        }
+        
+        .timeline-time {
+            font-size: 12px;
+            color: #7d8590;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .timeline-content {
+            background: #0d1117;
+            padding: 14px 16px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+        
+        .timeline-content strong {
+            color: #e6edf3;
+            font-weight: 600;
+        }
+        
+        /* Refresh Info */
+        .refresh-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            background: #0d1117;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #7d8590;
+        }
+        
+        .refresh-info i {
+            color: #3fb950;
+            margin-right: 8px;
+        }
+        
+        /* Loading State */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: #7d8590;
+        }
+        
+        .spinner {
+            border: 3px solid #30363d;
+            border-top: 3px solid #1f6feb;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-right: 16px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Alert Banner */
+        .alert-banner {
+            background: rgba(248, 81, 73, 0.1);
+            border: 1px solid rgba(248, 81, 73, 0.3);
+            border-left: 4px solid #f85149;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .alert-banner i {
+            color: #f85149;
+            font-size: 20px;
+        }
+        
+        .alert-banner-content h4 {
+            color: #f85149;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .alert-banner-content p {
+            color: #7d8590;
+            font-size: 13px;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0d1117;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #30363d;
+            border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #484f58;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-area {
+                padding: 20px;
+            }
+            
+            .top-bar {
+                padding: 16px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            
+            .table-wrapper {
+                overflow-x: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fas fa-shield-halved"></i>
+            <div class="logo-text">
+                <h2>HONEYTOKEN</h2>
+                <span>Security Monitoring</span>
+            </div>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#detections" class="nav-link">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Detections</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#scans" class="nav-link">
+                    <i class="fas fa-magnifying-glass"></i>
+                    <span>Scan History</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#tokens" class="nav-link">
+                    <i class="fas fa-key"></i>
+                    <span>Honeytokens</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="nav-section">
+            <div class="nav-section-title">System</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#alerts" class="nav-link">
+                        <i class="fas fa-bell"></i>
+                        <span>Alerts</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#timeline" class="nav-link">
+                        <i class="fas fa-clock"></i>
+                        <span>Activity</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#settings" class="nav-link">
+                        <i class="fas fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="page-title">
+                <h1>Security Overview</h1>
+                <p>Real-time honeytoken detection and monitoring</p>
+            </div>
+            
+            <div class="top-actions">
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span>System Active</span>
+                </div>
+                <button class="btn btn-secondary" onclick="refreshData()">
+                    <i class="fas fa-rotate"></i>
+                    Refresh
+                </button>
+                <button class="btn btn-primary" onclick="exportReport()">
+                    <i class="fas fa-download"></i>
+                    Export Report
+                </button>
+            </div>
+        </div>
+        
+        <!-- Content Area -->
+        <div class="content-area">
+            <!-- Alert Banner (shown if detections) -->
+            <div id="alertBanner" style="display: none;" class="alert-banner">
+                <i class="fas fa-triangle-exclamation"></i>
+                <div class="alert-banner-content">
+                    <h4>Security Alert: Honeytoken Detected!</h4>
+                    <p>One or more honeytokens have been accessed. Review detections immediately.</p>
+                </div>
+            </div>
+            
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card info">
+                    <div class="stat-header">
+                        <h3>Total Honeytokens</h3>
+                        <div class="stat-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value" id="totalTokens">0</div>
+                    <div class="stat-change">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Active monitoring</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card critical">
+                    <div class="stat-header">
+                        <h3>Detections</h3>
+                        <div class="stat-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value" id="detectionsCount">0</div>
+                    <div class="stat-change" id="detectionChange">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>No threats</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card warning">
+                    <div class="stat-header">
+                        <h3>Total Scans</h3>
+                        <div class="stat-icon">
+                            <i class="fas fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value" id="totalScans">0</div>
+                    <div class="stat-change">
+                        <i class="fas fa-clock"></i>
+                        <span id="lastScanTime">Never</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card success">
+                    <div class="stat-header">
+                        <h3>Alerts Sent</h3>
+                        <div class="stat-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value" id="alertsSent">0</div>
+                    <div class="stat-change positive">
+                        <i class="fas fa-check"></i>
+                        <span>All delivered</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Detections Panel -->
+            <div id="detections" class="panel">
+                <div class="panel-header">
+                    <h2>
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Recent Detections
+                    </h2>
+                    <div class="panel-actions">
+                        <button class="btn btn-secondary btn-sm" onclick="exportDetections()">
+                            <i class="fas fa-file-export"></i>
+                            Export
+                        </button>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <div id="detectionsTable"></div>
+                </div>
+            </div>
+            
+            <!-- Recent Scans Panel -->
+            <div id="scans" class="panel">
+                <div class="panel-header">
+                    <h2>
+                        <i class="fas fa-magnifying-glass"></i>
+                        Scan History
+                    </h2>
+                    <div class="panel-actions">
+                        <button class="btn btn-secondary btn-sm" onclick="runNewScan()">
+                            <i class="fas fa-play"></i>
+                            Run Scan
+                        </button>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <div id="scansTable"></div>
+                </div>
+            </div>
+            
+            <!-- Activity Timeline Panel -->
+            <div id="timeline" class="panel">
+                <div class="panel-header">
+                    <h2>
+                        <i class="fas fa-clock"></i>
+                        Activity Timeline
+                    </h2>
+                    <div class="panel-actions">
+                        <button class="btn btn-secondary btn-sm" onclick="clearTimeline()">
+                            <i class="fas fa-trash"></i>
+                            Clear
+                        </button>
+                    </div>
+                </div>
+                <div id="timelineContent"></div>
+            </div>
+            
+            <!-- Refresh Info -->
+            <div class="refresh-info">
+                <div>
+                    <i class="fas fa-circle-check"></i>
+                    Last updated: <strong id="lastUpdate">Never</strong>
+                </div>
+                <div>
+                    <span>Auto-refresh in <strong id="countdown">30</strong>s</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        // Load data from JSON files
+        async function loadData() {
+            try {
+                const [honeytokens, scans, alerts, detections] = await Promise.all([
+                    fetch('../config/honeytokens.json').then(r => r.ok ? r.json() : {tokens: []}),
+                    fetch('../config/scan_results.json').then(r => r.ok ? r.json() : {scans: []}),
+                    fetch('../config/alert_history.json').then(r => r.ok ? r.json() : {alerts: []}),
+                    fetch('../config/webhook_events.json').then(r => r.ok ? r.json() : {events: []})
+                ]);
+                
+                return { honeytokens, scans, alerts, detections };
+            } catch (error) {
+                console.error('Error loading data:', error);
+                return {
+                    honeytokens: {tokens: []},
+                    scans: {scans: []},
+                    alerts: {alerts: []},
+                    detections: {events: []}
+                };
+            }
+        }
+        
+        function updateStats(data) {
+            const totalTokens = data.honeytokens.tokens.length;
+            const detectedTokens = data.honeytokens.tokens.filter(t => t.detected).length;
+            const totalScans = data.scans.scans.length;
+            const successfulAlerts = data.alerts.alerts.filter(a => a.success).length;
+            
+            document.getElementById('totalTokens').textContent = totalTokens;
+            document.getElementById('detectionsCount').textContent = detectedTokens;
+            document.getElementById('totalScans').textContent = totalScans;
+            document.getElementById('alertsSent').textContent = successfulAlerts;
+            
+            // Update detection change status
+            const detectionChange = document.getElementById('detectionChange');
+            if (detectedTokens > 0) {
+                detectionChange.innerHTML = '<i class="fas fa-exclamation-triangle"></i> <span>Threats detected!</span>';
+                detectionChange.className = 'stat-change negative';
+                document.getElementById('alertBanner').style.display = 'flex';
+            } else {
+                detectionChange.innerHTML = '<i class="fas fa-shield-halved"></i> <span>No threats</span>';
+                detectionChange.className = 'stat-change';
+            }
+            
+            // Update last scan time
+            if (totalScans > 0) {
+                const lastScan = data.scans.scans[data.scans.scans.length - 1];
+                const scanTime = new Date(lastScan.started_at);
+                const now = new Date();
+                const diff = Math.floor((now - scanTime) / 1000 / 60);
+                document.getElementById('lastScanTime').textContent = diff === 0 ? 'Just now' : `${diff}m ago`;
+            }
+        }
+        
+        function renderDetections(data) {
+            const container = document.getElementById('detectionsTable');
+            const detectedTokens = data.honeytokens.tokens.filter(t => t.detected);
+            
+            if (detectedTokens.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-shield-check"></i>
+                        <h3>No Detections</h3>
+                        <p>All honeytokens are currently secure. The system is actively monitoring for any unauthorized access.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = '<table><thead><tr>' +
+                '<th>Token ID</th>' +
+                '<th>Type</th>' +
+                '<th>Created</th>' +
+                '<th>Detections</th>' +
+                '<th>Last Detected</th>' +
+                '<th>Status</th>' +
+                '<th>Actions</th>' +
+                '</tr></thead><tbody>';
+            
+            detectedTokens.forEach(token => {
+                const created = new Date(token.created_at).toLocaleDateString();
+                const detected = new Date(token.last_detected).toLocaleString();
+                html += `
+                    <tr>
+                        <td><code>${token.token_id.substring(0, 12)}...</code></td>
+                        <td><span class="badge info">${token.token_type}</span></td>
+                        <td>${created}</td>
+                        <td><strong>${token.detection_count}</strong></td>
+                        <td>${detected}</td>
+                        <td><span class="badge critical"><i class="fas fa-exclamation-circle"></i> DETECTED</span></td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm" onclick="viewDetails('${token.token_id}')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+        
+        function renderScans(data) {
+            const container = document.getElementById('scansTable');
+            const recentScans = data.scans.scans.slice(-15).reverse();
+            
+            if (recentScans.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-magnifying-glass"></i>
+                        <h3>No Scans Yet</h3>
+                        <p>Run your first scan to start monitoring for exposed honeytokens.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = '<table><thead><tr>' +
+                '<th>Scan ID</th>' +
+                '<th>Type</th>' +
+                '<th>Target</th>' +
+                '<th>Files Scanned</th>' +
+                '<th>Findings</th>' +
+                '<th>Honeytokens</th>' +
+                '<th>Duration</th>' +
+                '<th>Date</th>' +
+                '</tr></thead><tbody>';
+            
+            recentScans.forEach(scan => {
+                const findingsBadge = scan.total_findings > 0 ? 'warning' : 'success';
+                const honeytokenBadge = scan.honeytokens_found > 0 ? 'critical' : 'success';
+                const duration = scan.duration ? `${scan.duration}s` : 'N/A';
+                const date = new Date(scan.started_at).toLocaleString();
+                
+                html += `
+                    <tr>
+                        <td><code>${scan.scan_id}</code></td>
+                        <td><span class="badge neutral">${scan.scan_type}</span></td>
+                        <td><code>${scan.target.length > 30 ? scan.target.substring(0, 30) + '...' : scan.target}</code></td>
+                        <td>${scan.files_scanned || 0}</td>
+                        <td><span class="badge ${findingsBadge}"><i class="fas fa-exclamation-circle"></i> ${scan.total_findings}</span></td>
+                        <td><span class="badge ${honeytokenBadge}">${scan.honeytokens_found || 0}</span></td>
+                        <td>${duration}</td>
+                        <td>${date}</td>
+                    </tr>
+                `;
+            });
+            
+            html += '</tbody></table>';
+            container.innerHTML = html;
+        }
+        
+        function renderTimeline(data) {
+            const container = document.getElementById('timelineContent');
+            
+            // Combine all events
+            const events = [];
+            
+            data.honeytokens.tokens.forEach(token => {
+                events.push({
+                    time: new Date(token.created_at),
+                    text: `Honeytoken created: <strong>${token.token_type}</strong>`,
+                    type: 'info'
+                });
+                
+                if (token.detected) {
+                    events.push({
+                        time: new Date(token.last_detected),
+                        text: `⚠️ Honeytoken detected: <code>${token.token_id.substring(0, 12)}...</code>`,
+                        type: 'critical'
+                    });
+                }
+            });
+            
+            data.scans.scans.forEach(scan => {
+                const status = scan.total_findings > 0 ? 
+                    `Found ${scan.total_findings} findings` : 
+                    'Clean scan';
+                events.push({
+                    time: new Date(scan.started_at),
+                    text: `Scan completed: <strong>${status}</strong> in ${scan.target}`,
+                    type: scan.total_findings > 0 ? 'warning' : 'success'
+                });
+            });
+            
+            data.alerts.alerts.forEach(alert => {
+                events.push({
+                    time: new Date(alert.timestamp),
+                    text: `Alert sent via <strong>${alert.alert_type}</strong>`,
+                    type: alert.success ? 'success' : 'warning'
+                });
+            });
+            
+            // Sort by time descending
+            events.sort((a, b) => b.time - a.time);
+            
+            if (events.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-clock"></i>
+                        <h3>No Activity Yet</h3>
+                        <p>System activity will appear here once operations begin.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = '<div class="timeline">';
+            
+            events.slice(0, 25).forEach(event => {
+                const timeStr = formatTimeAgo(event.time);
+                html += `
+                    <div class="timeline-item ${event.type}">
+                        <div class="timeline-time">
+                            <i class="fas fa-clock"></i>
+                            ${timeStr}
+                        </div>
+                        <div class="timeline-content">
+                            ${event.text}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            container.innerHTML = html;
+        }
+        
+        function formatTimeAgo(date) {
+            const now = new Date();
+            const diff = Math.floor((now - date) / 1000);
+            
+            if (diff < 60) return 'Just now';
+            if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+            if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+            if (diff < 604800) return `${Math.floor(diff / 86400)}d ago`;
+            return date.toLocaleDateString();
+        }
+        
+        let countdownValue = 30;
+        let countdownInterval;
+        
+        async function refreshData() {
+            document.getElementById('lastUpdate').textContent = 'Loading...';
+            
+            const data = await loadData();
+            
+            updateStats(data);
+            renderDetections(data);
+            renderScans(data);
+            renderTimeline(data);
+            
+            document.getElementById('lastUpdate').textContent = new Date().toLocaleString();
+            
+            // Reset countdown
+            countdownValue = 30;
+            clearInterval(countdownInterval);
+            startCountdown();
+        }
+        
+        function startCountdown() {
+            countdownInterval = setInterval(() => {
+                countdownValue--;
+                document.getElementById('countdown').textContent = countdownValue;
+                if (countdownValue <= 0) {
+                    refreshData();
+                }
+            }, 1000);
+        }
+        
+        function exportReport() {
+            alert('Exporting report... This feature will generate a comprehensive PDF/JSON report of all detections and scans.');
+        }
+        
+        function exportDetections() {
+            alert('Exporting detections... This feature will export all detection data to CSV/JSON format.');
+        }
+        
+        function runNewScan() {
+            alert('Running new scan... This feature will trigger a new workspace scan.');
+        }
+        
+        function clearTimeline() {
+            if (confirm('Are you sure you want to clear the activity timeline?')) {
+                alert('Timeline cleared (feature requires backend implementation)');
+            }
+        }
+        
+        function viewDetails(tokenId) {
+            alert(`Viewing details for token: ${tokenId}\n\nThis feature will show:\n- Token metadata\n- Detection history\n- Related alerts\n- Usage patterns`);
+        }
+        
+        function clearDetections() {
+            if (confirm('Are you sure you want to clear the detection history?')) {
+                alert('This feature requires backend implementation');
+            }
+        }
+        
+        // Auto-refresh every 30 seconds
+        setInterval(refreshData, 30000);
+        
+        // Initial load
+        refreshData();
+        startCountdown();
+    </script>
+</body>
+</html>

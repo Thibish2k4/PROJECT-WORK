@@ -1,0 +1,11 @@
+{
+  "email": {
+    "enabled": false
+  },
+  "webhook": {
+    "enabled": false
+  },
+  "slack": {
+    "enabled": false
+  }
+}
